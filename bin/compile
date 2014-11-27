@@ -150,7 +150,7 @@ mkdir -p "$METEOR_BUILD_DIR"/app
 
 #tar -zxf "$CACHE_DIR"/"$BUNDLENAME" --strip-components 1 -C "$METEOR_BUILD_DIR"/app
 #rm "$CACHE_DIR"/"$BUNDLENAME"
-cp -rf "$BUILD_DIR"/ "$METEOR_BUILD_DIR"/app
+cp -rf "$BUILD_DIR/" "$METEOR_BUILD_DIR"/app
 
 echo "Installing server-side dependencies" | indent
 
