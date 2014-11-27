@@ -129,19 +129,20 @@ mkdir -p "$HOME"
 # bundle, and install into app/
 ############################################
 cd $BUILD_DIR
-echo "Installing meteor" | indent
+ls -l ./
+#echo "Installing meteor" | indent
 
 # Using different folder to prevent install script form deleting packages file
-VENDORED_METEOR="$(mktmpdir meteor)"
-curl --silent https://install.meteor.com | HOME="$VENDORED_METEOR" /bin/sh | indent
-echo "Meteor installed" | indent
+#VENDORED_METEOR="$(mktmpdir meteor)"
+#curl --silent https://install.meteor.com | HOME="$VENDORED_METEOR" /bin/sh & | indent
+#echo "Meteor installed" | indent
 
-"$VENDORED_METEOR"/.meteor/meteor --version | indent
+#"$VENDORED_METEOR"/.meteor/meteor --version | indent
 
 # build creates a directory with (one or more) bundles in it
 mkdir -p "$METEOR_BUILD_DIR"/app
-echo "Building meteor bundle" | indent
-HOME="$VENDORED_METEOR" "$VENDORED_METEOR"/.meteor/meteor build --directory "$METEOR_BUILD_DIR"/app 2>&1 | indent
+#echo "Building meteor bundle" | indent
+#HOME="$VENDORED_METEOR" "$VENDORED_METEOR"/.meteor/meteor build --directory "$METEOR_BUILD_DIR"/app 2>&1 | indent
 
 
 #BUNDLENAME="`basename $BUILD_DIR`.tar.gz"
